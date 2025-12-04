@@ -873,6 +873,10 @@
           "value": "ibmcloud-api-key"
         },
         {
+          "name": "cos_api_key_secret_name",
+          "value": "ibmcloud-api-key"
+        },
+        {
           "name": "prefix",
           "value": "ref:../../inputs/prefix"
         },
@@ -885,11 +889,19 @@
           "value": "ref:../2f - Workload - Container Registry/outputs/namespace_name"
         },
         {
-          "name": "add_container_name_suffix",
-          "value": true
+          "name": "add_code_engine_prefix",
+          "value": false
         },
         {
-          "name": "add_code_engine_prefix",
+          "name": "evidence_repo_enabled",
+          "value": false
+        },
+        {
+          "name": "enable_cos",
+          "value": false
+        },
+        {
+          "name": "scc_enable_scc",
           "value": false
         }
       ]
