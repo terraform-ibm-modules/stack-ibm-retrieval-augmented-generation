@@ -719,7 +719,7 @@
                 "description": "Enables:"
               },
               {
-                "title": "1. Red Hat OpenShift cluster for microservices workloads",
+                "title": "1. Red Hat OpenShift cluster configured with logging and monitoring agents for microservice workloads",
                 "description": " "
               },
               {

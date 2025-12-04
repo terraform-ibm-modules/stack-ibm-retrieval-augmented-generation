@@ -226,7 +226,7 @@
     },
     {
       "name": "2a - Essential Security - Encryption Key Management",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.3105799e-5686-4a43-9581-c70f141203f3-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.83d1bcb6-41d9-43b8-bd0b-14aea5d0f923-global",
       "inputs": [
         {
           "name": "existing_resource_group_name",
@@ -974,6 +974,32 @@
         {
           "name": "cloud_logs_ingress_endpoint",
           "value": "ref:../4a - Essential Security - Cloud Logs for logging/outputs/cloud_logs_ingress_private_endpoint"
+        }
+      ]
+    },
+    {
+      "name": "5f - Workload Essential Security - Red Hat OpenShift Monitoring and Workload Protection agent",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.c033bc16-625a-4025-a4d5-daf62b76bceb-global",
+      "inputs": [
+        {
+          "name": "prefix",
+          "value": "ref:../../inputs/prefix"
+        },
+        {
+          "name": "cluster_id",
+          "value": "ref:../3c - Workload - Compute Red Hat OpenShift Container Platform on VPC/outputs/workload_cluster_id"
+        },
+        {
+          "name": "cluster_resource_group_id",
+          "value": "ref:../3c - Workload - Compute Red Hat OpenShift Container Platform on VPC/outputs/workload_rg_id"
+        },
+        {
+          "name": "instance_crn",
+          "value": "ref:../2c - Essential Security - Cloud Monitoring/outputs/cloud_monitoring_crn"
+        },
+         {
+          "name": "access_key",
+          "value": "ref:../2c - Essential Security - Cloud Monitoring/outputs/cloud_monitoring_access_key"
         }
       ]
     },
