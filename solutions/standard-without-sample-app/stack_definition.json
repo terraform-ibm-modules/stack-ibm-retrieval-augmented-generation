@@ -873,7 +873,7 @@
     },
     {
       "name": "5e - Workload Essential Security - Red Hat OpenShift Monitoring and Workload Protection agent",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.c033bc16-625a-4025-a4d5-daf62b76bceb-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.660fc0d9-2af6-4a2b-a3ac-6f8b2bbf0063-global",
       "inputs": [
         {
           "name": "prefix",
