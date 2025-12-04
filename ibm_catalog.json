@@ -492,63 +492,153 @@
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing secret manager instance to use in this solution. If not set, a new secret manager instance is provisioned.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "secrets-manager",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_kms_instance_crn",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing KMS instance to use in this solution. If not set, a new KP instance is provisioned.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "kms",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_event_notifications_instance_crn",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing event notification instance to use in this solution. If not set, a new event notification instance is provisioned.",
-              "required": false
+              "required": false,
+                "custom_config": {
+                  "type": "platform_resource",
+                  "grouping": "deployment",
+                  "original_grouping": "deployment",
+                  "config_constraints": {
+                    "resourceType": "event-notifications",
+                    "selection": "single_select",
+                    "valueType": "crn"
+                  }
+                }
             },
             {
               "key": "existing_discovery_instance_crn",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing WatsonX SaaS discovery instance to use in this solution. If not set, a new discovery instance is provisioned depending on which plan is selected.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "discovery",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_assistant_instance_crn",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing WatsonX SaaS assistant instance to use in this solution. If not set, a new assistant instance is provisioned depending on which plan is selected.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "conversation",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_governance_instance_crn",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing WatsonX SaaS governance instance to use in this solution. If not set, a new governance instance is provisioned depending on which plan is selected.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "aiopenscale",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_studio_instance_crn",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing WatsonX SaaS studio instance to use in this solution. If not set, a new studio instance is provisioned depending on which plan is selected.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "data-science-experience",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_machine_learning_instance",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing WatsonX SaaS machine learning instance to use in this solution. If not set, a new machine learning instance is provisioned depending on which plan is selected.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "pm-20",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_elasticsearch_instance_crn",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing elasticsearch instance to use in this solution. If not set, a new elasticsearch instance is provisioned.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "databases-for-elasticsearch",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             }
           ],
           "outputs": [
@@ -1082,63 +1172,153 @@
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing secret manager instance to use in this solution. If not set, a new secret manager instance is provisioned.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "secrets-manager",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_kms_instance_crn",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing KMS instance to use in this solution. If not set, a new KP instance is provisioned.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "kms",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_event_notifications_instance_crn",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing event notification instance to use in this solution. If not set, a new event notification instance is provisioned.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "event-notifications",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_discovery_instance_crn",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing WatsonX SaaS discovery instance to use in this solution. If not set, a new discovery instance is provisioned depending on which plan is selected.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "discovery",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_assistant_instance_crn",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing WatsonX SaaS assistant instance to use in this solution. If not set, a new assistant instance is provisioned depending on which plan is selected.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "conversation",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_governance_instance_crn",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing WatsonX SaaS governance instance to use in this solution. If not set, a new governance instance is provisioned depending on which plan is selected.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "aiopenscale",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_studio_instance_crn",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing WatsonX SaaS studio instance to use in this solution. If not set, a new studio instance is provisioned depending on which plan is selected.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "data-science-experience",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_machine_learning_instance",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing WatsonX SaaS machine learning instance to use in this solution. If not set, a new machine learning instance is provisioned depending on which plan is selected.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "pm-20",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_elasticsearch_instance_crn",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing elasticsearch instance to use in this solution. If not set, a new elasticsearch instance is provisioned.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "databases-for-elasticsearch",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             }
           ],
           "outputs": [
@@ -1748,63 +1928,153 @@
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing secret manager instance to use in this solution. If not set, a new secret manager instance is provisioned.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "secrets-manager",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_kms_instance_crn",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing KMS instance to use in this solution. If not set, a new KP instance is provisioned.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "kms",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_event_notifications_instance_crn",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing event notification instance to use in this solution. If not set, a new event notification instance is provisioned.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "event-notifications",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_discovery_instance_crn",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing WatsonX SaaS discovery instance to use in this solution. If not set, a new discovery instance is provisioned depending on which plan is selected.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "discovery",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_assistant_instance_crn",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing WatsonX SaaS assistant instance to use in this solution. If not set, a new assistant instance is provisioned depending on which plan is selected.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "conversation",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_governance_instance_crn",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing WatsonX SaaS governance instance to use in this solution. If not set, a new governance instance is provisioned depending on which plan is selected.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "aiopenscale",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_studio_instance_crn",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing WatsonX SaaS studio instance to use in this solution. If not set, a new studio instance is provisioned depending on which plan is selected.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "data-science-experience",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_machine_learning_instance",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing WatsonX SaaS machine learning instance to use in this solution. If not set, a new machine learning instance is provisioned depending on which plan is selected.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "pm-20",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_elasticsearch_instance_crn",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing elasticsearch instance to use in this solution. If not set, a new elasticsearch instance is provisioned.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "databases-for-elasticsearch",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             }
           ],
           "outputs": [
@@ -2326,63 +2596,153 @@
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing secret manager instance to use in this solution. If not set, a new secret manager instance is provisioned.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "secrets-manager",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_kms_instance_crn",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing KMS instance to use in this solution. If not set, a new KP instance is provisioned.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "kms",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_event_notifications_instance_crn",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing event notification instance to use in this solution. If not set, a new event notification instance is provisioned.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "event-notifications",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_discovery_instance_crn",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing WatsonX SaaS discovery instance to use in this solution. If not set, a new discovery instance is provisioned depending on which plan is selected.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "discovery",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_assistant_instance_crn",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing WatsonX SaaS assistant instance to use in this solution. If not set, a new assistant instance is provisioned depending on which plan is selected.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "conversation",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_governance_instance_crn",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing WatsonX SaaS governance instance to use in this solution. If not set, a new governance instance is provisioned depending on which plan is selected.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "aiopenscale",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_studio_instance_crn",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing WatsonX SaaS studio instance to use in this solution. If not set, a new studio instance is provisioned depending on which plan is selected.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "data-science-experience",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_machine_learning_instance",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing WatsonX SaaS machine learning instance to use in this solution. If not set, a new machine learning instance is provisioned depending on which plan is selected.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "pm-20",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             },
             {
               "key": "existing_elasticsearch_instance_crn",
               "type": "string",
               "default_value": "__NULL__",
               "description": "The CRN of an existing elasticsearch instance to use in this solution. If not set, a new elasticsearch instance is provisioned.",
-              "required": false
+              "required": false,
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "databases-for-elasticsearch",
+                  "selection": "single_select",
+                  "valueType": "crn"
+                }
+              }
             }
           ],
           "outputs": [
