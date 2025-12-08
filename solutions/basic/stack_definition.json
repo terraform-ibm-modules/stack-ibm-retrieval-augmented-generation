@@ -902,7 +902,7 @@
         },
         {
           "name": "scc_enable_scc",
-          "value": false
+          "value": "false"
         }
       ]
     },
