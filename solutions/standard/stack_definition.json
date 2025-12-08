@@ -437,14 +437,6 @@
         {
           "name": "enable_cos_kms_encryption",
           "value": true
-        },
-        {
-          "name": "enable_cos",
-          "value": false
-        },
-        {
-          "name": "scc_enable_scc",
-          "value": false
         }
       ]
     },
@@ -925,6 +917,14 @@
         },
         {
           "name": "evidence_repo_enabled",
+          "value": false
+        },
+        {
+          "name": "enable_cos",
+          "value": false
+        },
+        {
+          "name": "scc_enable_scc",
           "value": false
         }
       ]
