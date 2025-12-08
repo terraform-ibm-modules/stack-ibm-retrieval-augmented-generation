@@ -230,7 +230,7 @@
               "key": "prefix",
               "type": "string",
               "default_value": "dev",
-              "random_string" : {
+              "random_string": {
                 "length": 4
               },
               "description": "The prefix to add to all resources that this solution creates (e.g `prod`, `test`, `dev`). Used to avoid name clashes in the target account when deploying this solution multiple times.",
@@ -395,7 +395,12 @@
               "custom_config": {
                 "type": "code_editor",
                 "grouping": "deployment",
-                "original_grouping": "deployment"
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "supportedLanguages": [
+                    "hcl"
+                  ]
+                }
               }
             },
             {
@@ -781,7 +786,7 @@
               "key": "prefix",
               "type": "string",
               "default_value": "dev",
-              "random_string" : {
+              "random_string": {
                 "length": 4
               },
               "description": "The prefix to add to all resources that this solution creates (e.g `prod`, `test`, `dev`). Used to avoid name clashes in the target account when deploying this solution multiple times.",
@@ -946,7 +951,12 @@
               "custom_config": {
                 "type": "code_editor",
                 "grouping": "deployment",
-                "original_grouping": "deployment"
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "supportedLanguages": [
+                    "hcl"
+                  ]
+                }
               }
             },
             {
@@ -1501,7 +1511,7 @@
               "key": "prefix",
               "type": "string",
               "default_value": "dev",
-              "random_string" : {
+              "random_string": {
                 "length": 4
               },
               "description": "The prefix to add to all resources that this solution creates (e.g `prod`, `test`, `dev`). Used to avoid name clashes in the target account when deploying this solution multiple times.",
@@ -1658,7 +1668,12 @@
               "custom_config": {
                 "type": "code_editor",
                 "grouping": "deployment",
-                "original_grouping": "deployment"
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "supportedLanguages": [
+                    "hcl"
+                  ]
+                }
               }
             },
             {
@@ -2033,7 +2048,7 @@
               "key": "prefix",
               "type": "string",
               "default_value": "dev",
-              "random_string" : {
+              "random_string": {
                 "length": 4
               },
               "description": "The prefix to add to all resources that this solution creates (e.g `prod`, `test`, `dev`). Used to avoid name clashes in the target account when deploying this solution multiple times.",
@@ -2190,7 +2205,12 @@
               "custom_config": {
                 "type": "code_editor",
                 "grouping": "deployment",
-                "original_grouping": "deployment"
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "supportedLanguages": [
+                    "hcl"
+                  ]
+                }
               }
             },
             {
