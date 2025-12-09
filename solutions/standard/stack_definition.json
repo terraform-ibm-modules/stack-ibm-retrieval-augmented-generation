@@ -513,7 +513,7 @@
     },
     {
       "name": "3d - Workload - DevSecOps evidence locker Object Storage bucket",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.8fd979dc-4035-4a6c-875a-2710613ed2bf-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.8ed78d53-edef-463f-8231-31fd18a41389-global",
       "inputs": [
         {
           "name": "prefix",
