@@ -802,7 +802,7 @@
         },
         {
           "name": "elasticsearch_version",
-          "value": "8.15"
+          "value": "8.19"
         },
         {
           "name": "kms_encryption_enabled",
