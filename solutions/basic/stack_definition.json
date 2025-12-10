@@ -574,7 +574,7 @@
     },
     {
       "name": "4b - Essential Security - App Configuration",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.6b380d3c-4259-4216-86d0-335ac5834d8a-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.1812cea7-7a3a-4d1e-a851-a369b00988de-global",
       "inputs": [
         {
           "name": "existing_resource_group_name",
