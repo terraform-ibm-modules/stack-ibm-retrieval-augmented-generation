@@ -4,6 +4,19 @@ The following [deployable architecture](https://cloud.ibm.com/docs/secure-enterp
 
 This deployable architecture provides a comprehensive foundation for trust, observability, security, and regulatory compliance. The architecture configures an IBM Cloud account to align with compliance settings. It also deploys key management and secrets management services and the infrastructure to support continuous integration (CI), continuous delivery (CD), and continuous compliance (CC) pipelines for secure management of the application lifecycle. It also deploys the WatsonX services suite and IBM Cloud Elasticsearch to facilitate a RAG pattern. These pipelines facilitate the deployment of the application, check for vulnerabilities and auditability, and help ensure a secure and trustworthy deployment of generative AI applications on IBM Cloud.
 
+## Overview
+* [Variations](#variations)
+* [Objective and benefits](#objective-and-benefits)
+* [Before you begin](#before-you-begin)
+* [Add the architecture to a project](#add-the-architecture-to-a-project)
+* [Configure your stack](#configure-your-stack)
+* [Deploy the architecture](#deploy-the-architecture)
+* [Monitor the build and application deployment](#monitor-the-build-and-application-deployment)
+* [Troubleshooting](#troubleshooting)
+* [Customization options](#customization-options)
+* [Undeploying the stack and infrastructure](#undeploying-the-stack-and-infrastructure)
+* [Known issues](#known-issues)
+
 ## Variations
 
 This deployable architecture is available in four variations, grouped into two categories (Basic and Standard). Each category offers an option with or without a sample application deployment or pipeline:
@@ -48,7 +61,11 @@ Before you deploy the deployable architecture, make sure that you complete the f
 > [!IMPORTANT]
 > You must use an API key that is associated with a user. You can't use service ID keys or trusted profiles.
 
-- Create an API key in the target account with the required permissions. The target account is the account that hosts the resources that are deployed by this architecture. For more information, see [Managing user API keys](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui).
+- Generating and exporting a signing key. This step is optional for deploying the application, but it is required for the CI pipeline to complete successfully. Without this step, the CI pipeline will report a failure due to the missing signing step. If you want to generate and export a signing key, follow these steps:
+    - Create or obtain a signing key by running the command `gpg --gen-key` without a passphrase (if not expired, you can use a previously generated key).
+    - Export the signing key by running the command `gpg --export-secret-key <email address> | base64`. For more information about storing the key, see [Generating a GPG key](https://cloud.ibm.com/docs/devsecops?topic=devsecops-devsecops-image-signing#cd-devsecops-gpg-export).
+    - Copy the value of the key and keep note of the key for later.
+- (Optional) Projects supports generating an API key for the user that is logged in, however you can alternatively choose to create an API key in the target account with the required permissions. The target account is the account that hosts the resources that are deployed by this architecture. For more information, see [Managing user API keys](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui).
     - Copy the value of the API key. You need it in the following steps.
     - In test or evaluation environments, you can grant the Administrator role on the following services
         - IAM Identity service. In addition to the Administrator role, when deploying the Standard variation of the Deployable Architecture, explicitly assign the `User API key creator` role, as it is mandatory for a successful OpenShift cluster deployment.
@@ -56,25 +73,14 @@ Before you deploy the deployable architecture, make sure that you complete the f
         - All Account Management services.
 
         To scope access to be more restrictive for a production environment, refer to the minimum permission level in the [permission tab](https://cloud.ibm.com/catalog/7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3/architecture/Retrieval_Augmented_Generation_Pattern-5fdd0045-30fc-4013-a8bc-6db9d5447a52-global#permissions) of this deployable architecture.
-- Generating and exporting a signing key. This step is optional for deploying the application, but it is required for the CI pipeline to complete successfully. Without this step, the CI pipeline will report a failure due to the missing signing step. If you want to generate and export a signing key, follow these steps:
-    - Create or obtain a signing key by running the command `gpg --gen-key` without a passphrase (if not expired, you can use a previously generated key).
-    - Export the signing key by running the command `gpg --export-secret-key <email address> | base64`. For more information about storing the key, see [Generating a GPG key](https://cloud.ibm.com/docs/devsecops?topic=devsecops-devsecops-image-signing#cd-devsecops-gpg-export).
-    - Copy the value of the key and keep note of the key for later.
-
 
 ## Add the architecture to a project
 
 1.  Go to the **Retrieval Augmented Generation (RAG) Pattern** [details page](https://cloud.ibm.com/catalog/7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3/architecture/Retrieval_Augmented_Generation_Pattern-5fdd0045-30fc-4013-a8bc-6db9d5447a52-global) in the IBM Cloud catalog community registry.
 1.  Select the latest product version in the Architecture section.
-1.  Select the variation **Basic** or **Standard**. Refers to the Variations section above for further details on the two variations.
-2.  Click **Add to project**
-3.  Select **Create new** and enter the following details:
-    1.  Add a name and description.
-    2.  Select a region and resource group for the project. For example, for evaluation purposes, you can select the region that is closest to you and the default resource group.
-
-        For more information about the enterprise account structures, see the [Central administration account](/docs/enterprise-account-architecture?topic=enterprise-account-architecture-admin-hub-account) white paper.
-    3.  Enter a configuration name. For example, "RAG", "dev" or "prod". The name can help you later to match your deployment target.
-4.  Click **Create**
+1.  Select the project you wish to use, or click **Create project**.
+1.  Select the variation you want to deploy. Refer to the Variations section above for further details on the different variations.
+1.  Click **Configure and deploy**
 
 ## Configure your stack
 
@@ -82,11 +88,11 @@ You can now create your configuration by setting variables.
 
 1.  From the **Security** panel, select the authentication method that you want to use to deploy your architecture.
 
-    Add the API key from the prerequisites in [Before you begin](#before-you-begin).
+    Add the API key from the prerequisites in [Before you begin](#before-you-begin) or choose **Create an API key**.
 1.  In the **Security** > **Authentication** tab in the **Configure** section, select the API key.
 1.  Enter values for required fields from the **Required** tab.
 
-    1.  Enter a prefix. This prefix is added to the beginning of the name of most resources that are created by the deployable architecture. The prefix helps to make sure that the resource names are unique, and it avoids clashes with other resources in the same account.
+    1.  Enter a prefix, or choose the default one. This prefix is added to the beginning of the name of most resources that are created by the deployable architecture. The prefix helps to make sure that the resource names are unique, and it avoids clashes with other resources in the same account.
 1.  Review values for optional fields from the **Optional** tab:
 
     1.  Specify the `signing_key` variable from the prerequisites in [Before you begin](#before-you-begin).
@@ -97,14 +103,10 @@ You can now create your configuration by setting variables.
 
 You can deploy a stacked deployable architecture through the IBM Cloud console in two ways:
 
-- By using **Auto-deploy**: The deployment method can be useful for demonstration and nonproduction environments. With auto-deploy, all the stack member configurations are validated and then approved and deployed.
-
-    You can check the **Auto-deploy** setting for your project by clicking **Manage** > **Settings**. By turning on Auto-deploy, you enable the setting for all configurations in the project.
-- Individually by deploying each member configuration. The manual method is appropriate for projects that hold production environments. You can review the changes in each member configuration before the automation is run.
+- By using **Auto-deploy** (default behaviour): The deployment method can be useful for demonstration and nonproduction environments. With auto-deploy, all the stack member configurations are validated and then approved and deployed.
+- Individually by deploying each member configuration. The manual method is appropriate for projects that hold production environments. You can review the changes in each member configuration before the automation is run. To opt into this approach, you need to un-check the **Auto-deploy** setting for your project by clicking **Manage** > **Settings**.
 
 > [!TIP]
-> After you approve the configuration, you might receive the error message "Unable to validate your configuration". To resolve the issue, refresh your browser.
->
 > You might see "New version available" notifications in the **Needs Attention** column in your project configuration. You can ignore these messages because they do not prevent you from deploying the stack.
 
 ### Deploying the architecture with Auto-deploy
@@ -117,8 +119,8 @@ You can deploy a stacked deployable architecture through the IBM Cloud console i
 
 1.  In your project, click the **Configurations** tab.
 
-    If the first member configuration of the stack (`Account Infrastructure Base`) is not marked as **Ready to validate**, refresh the page in your browser.
-1.  Click **Validate** in **Draft status** in the `Account Infrastructure Base` row.
+    If the first member configuration of the stack (`Account Configuration`) is not marked as **Ready to validate**, refresh the page in your browser.
+1.  Click **Validate** in **Draft status** in the `Account Configuration` row.
 1.  Approve the configuration and click **Deploy** after validation successfully completes.
 1.  After you deploy the initial member configuration, you can validate and deploy the remaining member configuration at the same time. Repeat these deployment steps for each member configuration in the architecture.
 
@@ -248,19 +250,28 @@ To use your own app, remove the `Workload - Sample RAG Application` member confi
 
     To undeploy the infrastructure created by the deployable architecture, follow the steps in [Deleting a project](https://cloud.ibm.com/docs/secure-enterprise?topic=secure-enterprise-delete-project) in the IBM Cloud docs.
 
-## Known Issues
+## Known issues
 
-[The Standard (OpenShift) variation is currently not idempotent](https://github.com/terraform-ibm-modules/stack-ibm-retrieval-augmented-generation/issues/247).
+### The Standard (OpenShift) variations are currently not idempotent.
 
-Both the `Landing zone` Deployable Architecture (DA) and the `Landing zone for cloud-native AI applications` Deployable Architecture (DA) attempt to manage the same `Access Control Lists (ACLs)`.
-This may result in duplicate or conflicting updates as the same ACL resource is updated from two independent Terraform states.
+Due to the fact that both the `Red Hat OpenShift Container Platform on VPC` and the `Sample RAG Application` Deployable Architectures are managing rules in the same Access Control List (ACL), if you are upgrading the stack to a newer version, the upgrade will:
+- Identify an update in the `Red Hat OpenShift Container Platform on VPC` DA to remove ACL rules that were added in the `Sample RAG Application` DA, causing the sample application to become non accessible.
+- Re-apply the ACL rules when the `Sample RAG Application` update completes.
 
 **Impact:**
+The sample application will be unavailable between the time the `Red Hat OpenShift Container Platform on VPC` DA upgrade starts, and the time the `Sample RAG Application` DA upgrade is complete. [Learn more](https://github.com/terraform-ibm-modules/stack-ibm-retrieval-augmented-generation/issues/247).
 
-- Non‑idempotent applies: `terraform apply` may produce updates even when no configuration changes exist.
+### RAG sample application failing to create Elasticsearch index - i/o timeout
 
-- Unexpected diffs: Terraform may show differences in ACL rules because another state has modified the resource.
+Intermittently it has been observed that the `Sample RAG Application` member Deployable Architecture (DA) can fail with an error like below:
 
-- Apply failures: Concurrent updates from both DAs may trigger errors such as “object changed outside of Terraform.
+```sh
+ 2025/12/04 17:29:20 Terraform apply | Error: dial tcp 166.9.58.190:32025: i/o timeout
+ 2025/12/04 17:29:20 Terraform apply |
+ 2025/12/04 17:29:20 Terraform apply |   with module.configure_elastic_index[0].elasticstack_elasticsearch_index.sample_index,
+ 2025/12/04 17:29:20 Terraform apply |   on ../../modules/elastic-index/main.tf line 7, in resource "elasticstack_elasticsearch_index" "sample_index":
+ 2025/12/04 17:29:20 Terraform apply |    7: resource "elasticstack_elasticsearch_index" "sample_index" {
+```
 
-These issues occur only in environments where both DAs are applied independently and target the same ACL resource.
+**Workaround:**
+While the issue is being investigated, the current workaround is to wait for some time and retry the deployment. It can some times take several hours until the deployment will pass. [Learn more](https://github.com/terraform-ibm-modules/stack-ibm-retrieval-augmented-generation/issues/283).
