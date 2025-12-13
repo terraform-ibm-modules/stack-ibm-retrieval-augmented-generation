@@ -864,14 +864,6 @@
           }
         },
         {
-          "name": "service_credential_names",
-          "value": {
-            "elastic_db_admin": "Administrator",
-            "wxasst_db_user": "Editor",
-            "toolchain_db_user": "Editor"
-          }
-        },
-        {
           "name": "existing_elasticsearch_instance_crn",
           "value": "ref:../../inputs/existing_elasticsearch_instance_crn"
         },
