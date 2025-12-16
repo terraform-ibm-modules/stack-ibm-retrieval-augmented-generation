@@ -535,16 +535,16 @@
               "default_value": "__NULL__",
               "description": "An existing Event Notifications instance to use in this solution. If not set, a new event notification instance is provisioned.",
               "required": false,
-                "custom_config": {
-                  "type": "platform_resource",
-                  "grouping": "deployment",
-                  "original_grouping": "deployment",
-                  "config_constraints": {
-                    "resourceType": "event-notifications",
-                    "selection": "single_select",
-                    "valueType": "crn"
-                  }
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "event-notifications",
+                  "selection": "single_select",
+                  "valueType": "crn"
                 }
+              }
             },
             {
               "key": "existing_discovery_instance_crn",
@@ -1141,45 +1141,6 @@
               }
             },
             {
-              "key": "enterprise_id",
-              "type": "string",
-              "default_value": "__NULL__",
-              "description": "If the account is an enterprise account and you want to scan sub-accounts for compliance, this value should be set to the enterprise ID (this is different to the account ID).",
-              "required": false
-            },
-            {
-              "key": "enterprise_account_group_ids_to_assign",
-              "type": "array",
-              "default_value": [
-                "all"
-              ],
-              "description": "A list of enterprise account group IDs to assign the trusted profile template to in order for the accounts to be scanned for compliance. Supports passing the string 'all' in the list to assign to all account groups. Only applies if a value is being passed for `enterprise_id`.",
-              "required": false,
-              "custom_config": {
-                "grouping": "deployment",
-                "original_grouping": "deployment",
-                "config_constraints": {
-                  "type": "string"
-                }
-              }
-            },
-            {
-              "key": "enterprise_account_ids_to_assign",
-              "type": "array",
-              "default_value": [
-                "all"
-              ],
-              "description": "A list of enterprise account IDs to assign the trusted profile template to in order for the accounts to be scanned. Supports passing the string 'all' in the list to assign to all accounts. Only applies if a value is being passed for `enterprise_id`.",
-              "required": false,
-              "custom_config": {
-                "grouping": "deployment",
-                "original_grouping": "deployment",
-                "config_constraints": {
-                  "type": "string"
-                }
-              }
-            },
-            {
               "key": "sample_app_git_url",
               "type": "string",
               "default_value": "https://github.com/IBM/gen-ai-rag-watsonx-sample-application",
@@ -1229,18 +1190,18 @@
               "default_value": "__NULL__",
               "description": "An existing Event Notifications instance to use in this solution. If not set, a new event notification instance is provisioned.",
               "required": false,
-                "custom_config": {
-                  "type": "platform_resource",
-                  "grouping": "deployment",
-                  "original_grouping": "deployment",
-                  "config_constraints": {
-                    "resourceType": "event-notifications",
-                    "selection": "single_select",
-                    "valueType": "crn"
-                  }
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "event-notifications",
+                  "selection": "single_select",
+                  "valueType": "crn"
                 }
+              }
             },
-           {
+            {
               "key": "existing_discovery_instance_crn",
               "display_name": "existing_watson_discovery_instance",
               "type": "string",
@@ -1999,16 +1960,16 @@
               "default_value": "__NULL__",
               "description": "An existing Event Notifications instance to use in this solution. If not set, a new event notification instance is provisioned.",
               "required": false,
-                "custom_config": {
-                  "type": "platform_resource",
-                  "grouping": "deployment",
-                  "original_grouping": "deployment",
-                  "config_constraints": {
-                    "resourceType": "event-notifications",
-                    "selection": "single_select",
-                    "valueType": "crn"
-                  }
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "event-notifications",
+                  "selection": "single_select",
+                  "valueType": "crn"
                 }
+              }
             },
             {
               "key": "existing_discovery_instance_crn",
@@ -2593,45 +2554,6 @@
               }
             },
             {
-              "key": "enterprise_id",
-              "type": "string",
-              "default_value": "__NULL__",
-              "description": "If the account is an enterprise account and you want to scan sub-accounts for compliance, this value should be set to the enterprise ID (this is different to the account ID).",
-              "required": false
-            },
-            {
-              "key": "enterprise_account_group_ids_to_assign",
-              "type": "array",
-              "default_value": [
-                "all"
-              ],
-              "description": "A list of enterprise account group IDs to assign the trusted profile template to in order for the accounts to be scanned for compliance. Supports passing the string 'all' in the list to assign to all account groups. Only applies if a value is being passed for `enterprise_id`.",
-              "required": false,
-              "custom_config": {
-                "grouping": "deployment",
-                "original_grouping": "deployment",
-                "config_constraints": {
-                  "type": "string"
-                }
-              }
-            },
-            {
-              "key": "enterprise_account_ids_to_assign",
-              "type": "array",
-              "default_value": [
-                "all"
-              ],
-              "description": "A list of enterprise account IDs to assign the trusted profile template to in order for the accounts to be scanned. Supports passing the string 'all' in the list to assign to all accounts. Only applies if a value is being passed for `enterprise_id`.",
-              "required": false,
-              "custom_config": {
-                "grouping": "deployment",
-                "original_grouping": "deployment",
-                "config_constraints": {
-                  "type": "string"
-                }
-              }
-            },
-            {
               "key": "sample_app_git_url",
               "type": "string",
               "default_value": "https://github.com/IBM/gen-ai-rag-watsonx-sample-application",
@@ -2681,16 +2603,16 @@
               "default_value": "__NULL__",
               "description": "An existing Event Notifications instance to use in this solution. If not set, a new event notification instance is provisioned.",
               "required": false,
-                "custom_config": {
-                  "type": "platform_resource",
-                  "grouping": "deployment",
-                  "original_grouping": "deployment",
-                  "config_constraints": {
-                    "resourceType": "event-notifications",
-                    "selection": "single_select",
-                    "valueType": "crn"
-                  }
+              "custom_config": {
+                "type": "platform_resource",
+                "grouping": "deployment",
+                "original_grouping": "deployment",
+                "config_constraints": {
+                  "resourceType": "event-notifications",
+                  "selection": "single_select",
+                  "valueType": "crn"
                 }
+              }
             },
             {
               "key": "existing_discovery_instance_crn",
