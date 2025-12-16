@@ -825,7 +825,7 @@
         },
         {
           "name": "plan",
-          "value": "enterprise"
+          "value": "platinum"
         },
         {
           "name": "elasticsearch_version",
@@ -845,11 +845,15 @@
         },
         {
           "name": "member_host_flavor",
-          "value": "multitenant"
+          "value": "b3c.4x16.encrypted"
         },
         {
           "name": "member_cpu_count",
-          "value": 0
+          "value": 3
+        },
+        {
+          "name": "elser_model_type",
+          "value": ".elser_model_2_linux-x86_64"
         },
         {
           "name": "service_credential_names",
@@ -1067,7 +1071,7 @@
     },
     {
       "name": "6 - Workload - Sample RAG Application",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.e7af3542-6a4a-44fe-b646-2598bb925719-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.9885d467-c535-4976-99fb-aa7c37141e76-global",
       "inputs": [
         {
           "name": "toolchain_region",
@@ -1096,10 +1100,6 @@
         {
           "name": "ci_pipeline_id",
           "value": "ref:../5c - Workload - DevSecOps Application Lifecycle Management/outputs/ci_pipeline_id"
-        },
-        {
-          "name": "watson_machine_learning_instance_guid",
-          "value": "ref:../3b - Gen AI - WatsonX SaaS services/outputs/watson_machine_learning_guid"
         },
         {
           "name": "watson_machine_learning_instance_resource_name",

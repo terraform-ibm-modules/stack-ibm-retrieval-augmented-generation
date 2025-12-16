@@ -767,7 +767,7 @@
         },
         {
           "name": "plan",
-          "value": "enterprise"
+          "value": "platinum"
         },
         {
           "name": "elasticsearch_version",
@@ -787,11 +787,19 @@
         },
         {
           "name": "member_host_flavor",
-          "value": "multitenant"
+          "value": "b3c.4x16.encrypted"
         },
         {
           "name": "member_cpu_count",
-          "value": 0
+          "value": 3
+        },
+        {
+          "name": "enable_elser_model",
+          "value": true
+        },
+        {
+          "name": "elser_model_type",
+          "value": ".elser_model_2_linux-x86_64"
         },
         {
           "name": "service_credential_names",
