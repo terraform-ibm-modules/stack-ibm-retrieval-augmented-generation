@@ -528,7 +528,7 @@
     },
     {
       "name": "4c - Essential Security - Secrets Manager",
-      "version_locator": "27017760-e25d-472b-836b-525e296a63ba.ab80372a-5d08-4203-b4ae-d8a7cf7b65b0",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.3bfcc0f7-6134-4ad6-b123-f1271300f578-global",
       "inputs": [
         {
           "name": "prefix",
