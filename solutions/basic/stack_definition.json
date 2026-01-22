@@ -754,7 +754,7 @@
     },
     {
       "name": "6 - Workload - Sample RAG Application",
-      "version_locator": "8862f413-2444-41a4-a19c-b9179f1a7a00.2465d409-b776-4b2b-99af-7ff91dd6089c",
+      "version_locator": "58d56db0-b7f4-4911-b6a8-1100c56671f9.dd03c80f-32c5-46e1-83e0-f4bd7d350cf7",
       "inputs": [
         {
           "name": "toolchain_region",
