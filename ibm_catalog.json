@@ -36,7 +36,6 @@
       "short_description": "Automate a cloud-native AI deployment with supporting IBM Cloud and watsonx services, embed your enterprise data in generative AI solutions.",
       "long_description": "This solution enables the provisioning of cloud-native application landing zones on IBM Cloud using a range of configurations tailored to different needs — from quick experimentation to enterprise-grade deployments. Each variation offers a distinct balance of automation, integration with IBM Cloud services for security, observability, and compliance, and readiness for evaluation or production use. Whether you're deploying serverless applications on IBM Code Engine or containerized workloads on Red Hat OpenShift, these configurations help accelerate your cloud-native journey. <br/> The Landing zone for cloud-native AI applications includes three core configurations: Quick Start for lightweight experimentation, Basic for flexible serverless deployments on Code Engine with foundational services, and Standard for production-ready OpenShift clusters with advanced security and compliance. Both Basic and Standard also offer variants that include a deployed sample application with watsonx integration and CI/CD pipelines for secure lifecycle management.",
       "offering_docs_url": "https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim",
-      "release_notes_url": "https://github.com/terraform-ibm-modules/stack-ibm-retrieval-augmented-generation/releases",
       "offering_icon_url": "https://globalcatalog.cloud.ibm.com/api/v1/1082e7d2-5e2f-0a11-a3bc-f88a8e1931fc/artifacts/solution.svg",
       "provider_name": "IBM",
       "features": [
@@ -69,6 +68,7 @@
           "index": 2,
           "short_description": "Ideal for Code Engine users seeking serverless simplicity with a hosted sample app and CI/CD pipeline.",
           "working_directory": "solutions/basic",
+          "release_notes_url": "https://github.com/terraform-ibm-modules/stack-ibm-retrieval-augmented-generation/releases",
           "ignore_readme": true,
           "dependency_version_2": true,
           "iam_permissions": [
@@ -710,6 +710,7 @@
           "index": 3,
           "short_description": "Ideal for Red Hat OpenShift users requiring enterprise-grade flexibility with a hosted sample app and automated pipeline deployment.",
           "working_directory": "solutions/standard",
+          "release_notes_url": "https://github.com/terraform-ibm-modules/stack-ibm-retrieval-augmented-generation/releases",
           "ignore_readme": true,
           "dependency_version_2": true,
           "iam_permissions": [
@@ -1513,6 +1514,7 @@
           "index": 4,
           "short_description": "Ideal for Code Engine users seeking serverless simplicity without deploying a sample app or pipeline.",
           "working_directory": "solutions/basic-without-sample-app",
+          "release_notes_url": "https://github.com/terraform-ibm-modules/stack-ibm-retrieval-augmented-generation/releases",
           "ignore_readme": true,
           "dependency_version_2": true,
           "iam_permissions": [
@@ -2135,6 +2137,7 @@
           "index": 5,
           "short_description": "Ideal for Red Hat OpenShift users seeking enterprise-grade flexibility without a sample app or pipeline included.",
           "working_directory": "solutions/standard-without-sample-app",
+          "release_notes_url": "https://github.com/terraform-ibm-modules/stack-ibm-retrieval-augmented-generation/releases",
           "ignore_readme": true,
           "dependency_version_2": true,
           "iam_permissions": [
