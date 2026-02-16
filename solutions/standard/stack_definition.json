@@ -1144,6 +1144,14 @@
         {
           "name": "cos_kms_crn",
           "value": "ref:../2a - Essential Security - Encryption Key Management/outputs/kms_instance_crn"
+        },
+        {
+          "name": "cluster_name",
+          "value": "ref:../3c - Workload - Compute Red Hat OpenShift Container Platform on VPC/outputs/workload_cluster_name"
+        },
+        {
+          "name": "cluster_zone_count",
+          "value": "ref:../3c - Workload - Compute Red Hat OpenShift Container Platform on VPC/inputs/cluster_zones"
         }
       ]
     }
