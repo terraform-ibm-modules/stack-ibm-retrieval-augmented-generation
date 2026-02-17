@@ -996,7 +996,7 @@
     },
     {
       "name": "6 - Workload - Sample RAG Application",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.65a4ac9e-e708-4dc6-bbe9-81ead56ccb97-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.a91028f4-0ef6-452c-809d-79bbe982f709-global",
       "inputs": [
         {
           "name": "toolchain_region",
@@ -1061,6 +1061,10 @@
         {
           "name": "secrets_manager_region",
           "value": "ref:../4c - Essential Security - Secrets Manager/outputs/secrets_manager_region"
+        },
+        {
+          "name": "secrets_manager_resource_group_name",
+          "value": "ref:../4c - Essential Security - Secrets Manager/outputs/resource_group_name"
         },
         {
           "name": "elastic_instance_crn",
