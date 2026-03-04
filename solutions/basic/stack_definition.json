@@ -953,6 +953,10 @@
         {
           "name": "scc_enable_scc",
           "value": "false"
+        },
+        {
+          "name": "sm_secret_group",
+          "value": "ref:../6 - Workload - Sample RAG Application/outputs/secret_group_name"
         }
       ]
     },
