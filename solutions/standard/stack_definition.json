@@ -983,7 +983,7 @@
         },
         {
           "name": "sm_secret_group",
-          "value": "ref:../6 - Workload - Sample RAG Application/outputs/secret_group_name"
+          "value": "rag-sample-app-secrets"
         }
       ]
     },
@@ -1144,6 +1144,10 @@
         {
           "name": "secrets_manager_resource_group_name",
           "value": "ref:../4c - Essential Security - Secrets Manager/outputs/resource_group_name"
+        },
+        {
+          "name": "secret_group_name",
+          "value": "rag-sample-app-secrets"
         },
         {
           "name": "elastic_instance_crn",
