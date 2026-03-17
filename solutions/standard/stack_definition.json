@@ -986,10 +986,6 @@
         {
           "name": "scc_enable_scc",
           "value": "false"
-        },
-        {
-          "name": "sm_secret_group",
-          "value": "ref:../../inputs/rag_app_secret_group_name"
         }
       ]
     },
@@ -1081,7 +1077,7 @@
     },
     {
       "name": "6 - Workload - Sample RAG Application",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.419065db-a216-4cfd-92d8-2d06bc50f8cf-global",
+      "version_locator": "ee10f3b9-2f28-4725-8e70-2a221aab72fc.7436519a-7e37-461c-be43-cc1d75128939",
       "inputs": [
         {
           "name": "toolchain_region",
