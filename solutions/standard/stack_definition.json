@@ -881,7 +881,7 @@
     },
     {
       "name": "5c - Workload - DevSecOps Application Lifecycle Management",
-      "version_locator": "ee10f3b9-2f28-4725-8e70-2a221aab72fc.f5d8a73f-570f-4f62-9b49-a7d71c4f9e37",
+      "version_locator": "1082e7d2-5e2f-0a11-a3bc-f88a8e1931fc.9ddceee4-8100-48fd-8550-c72b304bd329-global",
       "inputs": [
         {
           "name": "toolchain_name",
