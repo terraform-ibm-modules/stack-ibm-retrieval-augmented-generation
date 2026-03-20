@@ -175,12 +175,6 @@
       "required": false,
       "type": "string",
       "hidden": false
-    },
-    {
-      "name": "rag_app_secret_group_name",
-      "required": false,
-      "type": "string",
-      "hidden": false
     }
   ],
   "members": [
@@ -1146,10 +1140,6 @@
         {
           "name": "secrets_manager_resource_group_name",
           "value": "ref:../4c - Essential Security - Secrets Manager/outputs/resource_group_name"
-        },
-        {
-          "name": "secret_group_name",
-          "value": "ref:../../inputs/rag_app_secret_group_name"
         },
         {
           "name": "elastic_instance_crn",
