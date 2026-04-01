@@ -174,21 +174,6 @@ Find the reclamation ID of the Secrets Manager service. Use that ID in the follo
 ibmcloud resource reclamation-delete <reclamation-id>
 ```
 
-### Why does the deployment fail when creating pipeline properties?
-
-This particular problem can occur when your ALM/toolchain deployment is more than 14 days old and the application configuration DA has been undeployed/redeployed. This is due to the Continuous Delivery service being required to create and delete pipeline properties, and the deployment occurs when the CD service may not exist. We are working on a long-term solution for this bug, but in the meantime it can be mitigated by ensuring the existence of a CD service in the resource group where toolchains are expected to be created.
-
-The problem will occur in the `Workload - Sample RAG App Configuration` deployable architecture, in both Code Engine and OCP variations. The error will typically contain this message:
-
-```
-"errors": [
-  {
-    "code": 403,
-    "message": "Continuous Delivery service required"
-  }
-]
-```
-
 ## Customization options
 
 Many customizations are possible with this architecture. These are some common options.
@@ -251,6 +236,21 @@ To use your own app, remove the `Workload - Sample RAG Application` member confi
     To undeploy the infrastructure created by the deployable architecture, follow the steps in [Deleting a project](https://cloud.ibm.com/docs/secure-enterprise?topic=secure-enterprise-delete-project) in the IBM Cloud docs.
 
 ## Known issues
+
+### Why does the deployment fail when creating pipeline properties?
+
+This particular problem can occur when your ALM/toolchain deployment is more than 14 days old and the application configuration DA has been undeployed/redeployed. This is due to the Continuous Delivery service being required to create and delete pipeline properties, and the deployment occurs when the CD service may not exist. We are working on a long-term solution for this bug, but in the meantime it can be mitigated by ensuring the existence of a CD service in the resource group where toolchains are expected to be created.
+
+The problem will occur in the `Workload - Sample RAG App Configuration` deployable architecture, in both Code Engine and OCP variations. The error will typically contain this message:
+
+```
+"errors": [
+  {
+    "code": 403,
+    "message": "Continuous Delivery service required"
+  }
+]
+```
 
 ### The Standard (OpenShift) variations are currently not idempotent.
 
