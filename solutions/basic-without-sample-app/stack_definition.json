@@ -168,7 +168,7 @@
   "members": [
     {
       "name": "1 - Account Configuration",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.3c6184a8-6772-41a4-a3f9-b12e93088caa-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.99200ca8-c18a-48b4-8a69-a2c33087d928-global",
       "inputs": [
         {
           "name": "prefix",
@@ -210,7 +210,7 @@
     },
     {
       "name": "2a - Essential Security - Encryption Key Management",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.fba8aa38-b3d8-4c5e-af43-e125f02e5f15-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.210731e1-812e-4253-a5c3-ab485285aed4-global",
       "inputs": [
         {
           "name": "existing_resource_group_name",
@@ -236,7 +236,7 @@
     },
     {
       "name": "2b - Essential Security - Cloud Object Storage",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.a188a45a-0cc1-4f5b-86e5-d126b6097eb2-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.dabe69f5-8e39-4c44-b692-9fc458bb02ea-global",
       "inputs": [
         {
           "name": "prefix",
@@ -250,7 +250,7 @@
     },
     {
       "name": "2c - Essential Security - Cloud Monitoring",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.50ebf77c-a703-404a-b803-1e5f11612bc0-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.c925f8db-486d-47dd-a2f5-75a822c32c42-global",
       "inputs": [
         {
           "name": "region",
@@ -280,7 +280,7 @@
     },
     {
       "name": "2d - Workload - Code Engine Project",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.5e3d032e-608a-47c4-ae74-13a463a6453e-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.c4c999ce-6aff-488e-80a3-e404c8ea92e3-global",
       "inputs": [
         {
           "name": "existing_resource_group_name",
@@ -302,7 +302,7 @@
     },
     {
       "name": "2e - Workload - Container Registry",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.215812bd-147c-47e1-ab1f-4f5add907936-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.e7b4a5c1-1777-4325-8319-6eb7b1e4c042-global",
       "inputs": [
         {
           "name": "existing_resource_group_name",
@@ -324,7 +324,7 @@
     },
     {
       "name": "3a - Essential Security - Event Notifications",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.c087bb90-4cba-4569-8a5a-8cdf70cd0f24-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.8accba96-48f2-4641-b8e1-65adc766c8d4-global",
       "inputs": [
         {
           "name": "existing_cos_instance_crn",
@@ -448,7 +448,7 @@
     },
     {
       "name": "4a - Essential Security - Cloud Logs for logging",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.d9c20c4d-dc28-44ff-bc71-5ce113e784a2-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.7c35fae5-48ef-470b-927a-8c5978b3f8b4-global",
       "inputs": [
         {
           "name": "region",
@@ -494,7 +494,7 @@
     },
     {
       "name": "4b - Essential Security - App Configuration",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.0da1eb31-bbea-483d-a600-2ea105ed5018-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.2c072ac6-0941-4c32-a38b-d910c0eff20b-global",
       "inputs": [
         {
           "name": "existing_resource_group_name",
@@ -560,7 +560,7 @@
     },
     {
       "name": "4c - Essential Security - Secrets Manager",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.86f1075b-de70-46bd-a6cd-aadfdda7e1da-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.77243305-ade8-40d7-9446-6a948b232e75-global",
       "inputs": [
         {
           "name": "prefix",
@@ -606,7 +606,7 @@
     },
     {
       "name": "4d - Essential Security - Cloud Logs for activity tracking",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.d9c20c4d-dc28-44ff-bc71-5ce113e784a2-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.7c35fae5-48ef-470b-927a-8c5978b3f8b4-global",
       "inputs": [
         {
           "name": "region",
@@ -664,7 +664,7 @@
     },
     {
       "name": "5a - Essential Security - Security and Compliance Center Workload Protection",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.41d84a24-fc56-4094-9f73-265ddc7ab63b-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.05e542b1-f45e-4e01-a4cb-a829d60616f9-global",
       "inputs": [
         {
           "name": "existing_resource_group_name",
@@ -698,7 +698,7 @@
     },
     {
       "name": "5b - Gen AI - Databases for Elasticsearch",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.e3e7ae87-0224-4893-9069-4b6dede0ca76-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.aab55ce1-e5a1-46cf-9805-ef8e454449e6-global",
       "inputs": [
         {
           "name": "existing_resource_group_name",
@@ -763,7 +763,7 @@
     },
     {
       "name": "5c - Essential Security - Activity Tracker Event Routing",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.247af203-d8ce-43bd-b8dc-f5375d94987d-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.f4039829-46af-4641-99b7-3841d48060f1-global",
       "inputs": [
         {
           "name": "region",
