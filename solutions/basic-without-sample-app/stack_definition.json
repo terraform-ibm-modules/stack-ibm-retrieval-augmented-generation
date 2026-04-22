@@ -746,10 +746,16 @@
         },
         {
           "name": "service_credential_names",
-          "value": {
-            "elastic_db_admin": "Administrator",
-            "wxasst_db_user": "Editor"
-          }
+          "value": [
+            {
+              "name": "elastic_db_admin",
+              "role": "Administrator"
+            },
+            {
+              "name": "wxasst_db_user",
+              "role": "Editor"
+            }
+          ]
         },
         {
           "name": "existing_elasticsearch_instance_crn",
