@@ -180,7 +180,7 @@
   "members": [
     {
       "name": "1 - Account Configuration",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.99200ca8-c18a-48b4-8a69-a2c33087d928-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.8ccc42f6-7ce1-4c2a-97aa-04316764d172-global",
       "inputs": [
         {
           "name": "prefix",
@@ -226,7 +226,7 @@
     },
     {
       "name": "2a - Essential Security - Encryption Key Management",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.210731e1-812e-4253-a5c3-ab485285aed4-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.643c0e4b-a51f-45de-a6a3-822c13ffb431-global",
       "inputs": [
         {
           "name": "existing_resource_group_name",
@@ -252,7 +252,7 @@
     },
     {
       "name": "2b - Essential Security - Cloud Object Storage",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.dabe69f5-8e39-4c44-b692-9fc458bb02ea-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.48af5644-e751-4286-a163-23aad67147a1-global",
       "inputs": [
         {
           "name": "prefix",
@@ -266,7 +266,7 @@
     },
     {
       "name": "2c - Essential Security - Cloud Monitoring",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.c925f8db-486d-47dd-a2f5-75a822c32c42-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.bebd52dc-d93e-4198-850d-fb22ffba1091-global",
       "inputs": [
         {
           "name": "region",
@@ -296,7 +296,7 @@
     },
     {
       "name": "2d - Workload - Container Registry",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.e7b4a5c1-1777-4325-8319-6eb7b1e4c042-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.d5bf28c8-f6df-4c43-935c-903348614d64-global",
       "inputs": [
         {
           "name": "existing_resource_group_name",
@@ -318,7 +318,7 @@
     },
     {
       "name": "3a - Essential Security - Event Notifications",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.8accba96-48f2-4641-b8e1-65adc766c8d4-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.c6c26ba4-9025-4500-8e0d-8fe68d32d4ec-global",
       "inputs": [
         {
           "name": "existing_cos_instance_crn",
@@ -513,7 +513,7 @@
     },
     {
       "name": "3d - Workload - DevSecOps evidence locker Object Storage bucket",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.59ca5bff-84c4-4f99-bcef-028d0331416f-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.eb2d8295-c9c8-42ca-9c45-3beb6e1b8e89-global",
       "inputs": [
         {
           "name": "prefix",
@@ -555,7 +555,7 @@
     },
     {
       "name": "4a - Essential Security - Cloud Logs for logging",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.7c35fae5-48ef-470b-927a-8c5978b3f8b4-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.3ec0bdb8-a6ae-4342-a7bc-797551f50184-global",
       "inputs": [
         {
           "name": "region",
@@ -601,7 +601,7 @@
     },
     {
       "name": "4b - Essential Security - App Configuration",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.2c072ac6-0941-4c32-a38b-d910c0eff20b-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.aba35b39-b72d-4e54-8a62-f1f3e7eb8fd7-global",
       "inputs": [
         {
           "name": "existing_resource_group_name",
@@ -667,7 +667,7 @@
     },
     {
       "name": "4c - Essential Security - Secrets Manager",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.77243305-ade8-40d7-9446-6a948b232e75-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.29409e0a-8a54-4b65-91d0-ccd4c43890db-global",
       "inputs": [
         {
           "name": "prefix",
@@ -713,7 +713,7 @@
     },
     {
       "name": "4d - Essential Security - Cloud Logs for activity tracking",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.7c35fae5-48ef-470b-927a-8c5978b3f8b4-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.3ec0bdb8-a6ae-4342-a7bc-797551f50184-global",
       "inputs": [
         {
           "name": "region",
@@ -771,7 +771,7 @@
     },
     {
       "name": "5a - Essential Security - Security and Compliance Center Workload Protection",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.05e542b1-f45e-4e01-a4cb-a829d60616f9-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.8e95c5d5-71a6-4074-8fd6-5ccde890aa8b-global",
       "inputs": [
         {
           "name": "existing_resource_group_name",
@@ -805,7 +805,7 @@
     },
     {
       "name": "5b - Gen AI - Databases for Elasticsearch",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.aab55ce1-e5a1-46cf-9805-ef8e454449e6-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.a9bcf3fd-ad26-42e1-a05e-fe723ecf38dd-global",
       "inputs": [
         {
           "name": "existing_resource_group_name",
@@ -857,11 +857,20 @@
         },
         {
           "name": "service_credential_names",
-          "value": {
-            "elastic_db_admin": "Administrator",
-            "wxasst_db_user": "Editor",
-            "toolchain_db_user": "Editor"
-          }
+          "value": [
+            {
+              "name": "elastic_db_admin",
+              "role": "Administrator"
+            },
+            {
+              "name": "wxasst_db_user",
+              "role": "Editor"
+            },
+            {
+              "name": "toolchain_db_user",
+              "role": "Editor"
+            }
+          ]
         },
         {
           "name": "existing_elasticsearch_instance_crn",
@@ -875,7 +884,7 @@
     },
     {
       "name": "5c - Workload - DevSecOps Application Lifecycle Management",
-      "version_locator": "1082e7d2-5e2f-0a11-a3bc-f88a8e1931fc.9ddceee4-8100-48fd-8550-c72b304bd329-global",
+      "version_locator": "1082e7d2-5e2f-0a11-a3bc-f88a8e1931fc.fabd1606-b7f4-4235-8fdb-0c4b4e74ae6b-global",
       "inputs": [
         {
           "name": "toolchain_name",
@@ -985,7 +994,7 @@
     },
     {
       "name": "5d - Essential Security - Activity Tracker Event Routing",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.f4039829-46af-4641-99b7-3841d48060f1-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.5d8e5256-97b9-4fa0-ab60-23786de1d30f-global",
       "inputs": [
         {
           "name": "region",
@@ -1023,7 +1032,7 @@
     },
     {
       "name": "5e - Workload Essential Security - Red Hat OpenShift logging agent",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.5c20b307-1665-415f-bc89-456aca771fab-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.872de201-359b-4dee-ada2-2ddc4e677ca3-global",
       "inputs": [
         {
           "name": "prefix",
@@ -1045,7 +1054,7 @@
     },
     {
       "name": "5f - Workload Essential Security - Red Hat OpenShift Monitoring and Workload Protection agent",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.ea7189fb-8bb3-4b0d-9038-ad3a2ca12eb8-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.8c7e919a-e3fa-40a5-b358-a4bd1657e2c3-global",
       "inputs": [
         {
           "name": "prefix",
@@ -1071,7 +1080,7 @@
     },
     {
       "name": "6 - Workload - Sample RAG Application",
-      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.8fa6e24d-b5b3-449e-b3bc-9330c7a89eeb-global",
+      "version_locator": "7a4d68b4-cf8b-40cd-a3d1-f49aff526eb3.5afebb9b-4e0a-40b0-b3ab-2f4288b8741a-global",
       "inputs": [
         {
           "name": "toolchain_region",
