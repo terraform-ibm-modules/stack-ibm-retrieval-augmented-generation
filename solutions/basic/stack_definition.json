@@ -936,6 +936,10 @@
           "value": "ref:../3c - Workload - DevSecOps evidence locker Object Storage bucket/outputs/s3_endpoint_direct"
         },
         {
+          "name": "cos_instance_crn",
+          "value": "ref:./members/2b - Essential Security - Cloud Object Storage/outputs/cos_instance_crn"
+        },
+        {
           "name": "prefix",
           "value": "ref:../../inputs/prefix"
         },
