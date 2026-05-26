@@ -1,6 +1,7 @@
 package tests
 
 import (
+	"context"
 	"fmt"
 	"log"
 	"os"
@@ -81,9 +82,9 @@ func TestProjectsBasicExistingResourcesTest(t *testing.T) {
 	// Provision RG, EN, SM and KMS
 	// ------------------------------------------------------------------------------------
 
-	prefix := fmt.Sprintf("ragext-%s", strings.ToLower(random.UniqueId()))
+	prefix := fmt.Sprintf("ragext-%s", strings.ToLower(random.UniqueID()))
 	realTerraformDir := "./resources"
-	tempTerraformDir, _ := files.CopyTerraformFolderToTemp(realTerraformDir, fmt.Sprintf(prefix+"-%s", strings.ToLower(random.UniqueId())))
+	tempTerraformDir, _ := files.CopyTerraformFolderToTemp(realTerraformDir, fmt.Sprintf(prefix+"-%s", strings.ToLower(random.UniqueID())))
 
 	// Verify ibmcloud_api_key variable is set
 	checkVariable := "TF_VAR_ibmcloud_api_key"
@@ -101,8 +102,8 @@ func TestProjectsBasicExistingResourcesTest(t *testing.T) {
 		// This is the same as setting the -upgrade=true flag with terraform.
 		Upgrade: true,
 	})
-	terraform.WorkspaceSelectOrNew(t, existingTerraformOptions, prefix)
-	_, existErr := terraform.InitAndApplyE(t, existingTerraformOptions)
+	terraform.WorkspaceSelectOrNewContext(t, context.Background(), existingTerraformOptions, prefix)
+	_, existErr := terraform.InitAndApplyContextE(t, context.Background(), existingTerraformOptions)
 	if existErr != nil {
 		assert.True(t, existErr == nil, "Init and Apply of temp existing resource failed")
 	} else {
@@ -124,16 +125,16 @@ func TestProjectsBasicExistingResourcesTest(t *testing.T) {
 		}
 
 		options.StackInputs = map[string]interface{}{
-			"prefix":                                    terraform.Output(t, existingTerraformOptions, "prefix"),
-			"region":                                    terraform.Output(t, existingTerraformOptions, "region"),
-			"existing_resource_group_name":              terraform.Output(t, existingTerraformOptions, "resource_group_name"),
+			"prefix":                                    terraform.OutputContext(t, context.Background(), existingTerraformOptions, "prefix"),
+			"region":                                    terraform.OutputContext(t, context.Background(), existingTerraformOptions, "region"),
+			"existing_resource_group_name":              terraform.OutputContext(t, context.Background(), existingTerraformOptions, "resource_group_name"),
 			"ibmcloud_api_key":                          options.RequiredEnvironmentVars["TF_VAR_ibmcloud_api_key"], // always required by the stack
 			"enable_platform_metrics":                   false,
-			"existing_secrets_manager_crn":              terraform.Output(t, existingTerraformOptions, "secrets_manager_instance_crn"),
+			"existing_secrets_manager_crn":              terraform.OutputContext(t, context.Background(), existingTerraformOptions, "secrets_manager_instance_crn"),
 			"skip_secrets_manager_iam_auth_policy":      true, // skip as s2s auth policy was already created for existing instance
 			"signing_key":                               privateKey,
-			"existing_kms_instance_crn":                 terraform.Output(t, existingTerraformOptions, "kms_instance_crn"),
-			"existing_event_notifications_instance_crn": terraform.Output(t, existingTerraformOptions, "event_notifications_instance_crn"),
+			"existing_kms_instance_crn":                 terraform.OutputContext(t, context.Background(), existingTerraformOptions, "kms_instance_crn"),
+			"existing_event_notifications_instance_crn": terraform.OutputContext(t, context.Background(), existingTerraformOptions, "event_notifications_instance_crn"),
 			"event_notifications_email_list":            []string{"GoldenEye.Operations@ibm.com"},
 			"secrets_manager_secret_groups":             []string{}, // Don't create any secret groups in existing instance (The default 'General' group already exists)
 		}
@@ -153,8 +154,8 @@ func TestProjectsBasicExistingResourcesTest(t *testing.T) {
 		fmt.Println("Terratest failed. Debug the test and delete resources manually.")
 	} else {
 		logger.Log(t, "START: Destroy (existing resources)")
-		terraform.Destroy(t, existingTerraformOptions)
-		terraform.WorkspaceDelete(t, existingTerraformOptions, prefix)
+		terraform.DestroyContext(t, context.Background(), existingTerraformOptions)
+		terraform.WorkspaceDeleteContext(t, context.Background(), existingTerraformOptions, prefix)
 		logger.Log(t, "END: Destroy (existing resources)")
 	}
 }
