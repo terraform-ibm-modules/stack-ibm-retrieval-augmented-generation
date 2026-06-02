@@ -44,7 +44,7 @@ const basicDaStackDefPath = "solutions/basic/stack_definition.json"
 const standardDaStackDefPath = "solutions/standard/stack_definition.json"
 
 func TestProjectsBasicFullTest(t *testing.T) {
-	t.Parallel()
+	// t.Parallel()
 
 	options := testprojects.TestProjectOptionsDefault(&testprojects.TestProjectsOptions{
 		Testing:                t,
@@ -76,7 +76,7 @@ func TestProjectsBasicFullTest(t *testing.T) {
 }
 
 func TestProjectsBasicExistingResourcesTest(t *testing.T) {
-	t.Parallel()
+	// t.Parallel()
 
 	// ------------------------------------------------------------------------------------
 	// Provision RG, EN, SM and KMS
@@ -161,7 +161,7 @@ func TestProjectsBasicExistingResourcesTest(t *testing.T) {
 }
 
 func TestProjectsStandardFullTest(t *testing.T) {
-	t.Parallel()
+	// t.Parallel()
 
 	options := testprojects.TestProjectOptionsDefault(&testprojects.TestProjectsOptions{
 		Testing:                t,
