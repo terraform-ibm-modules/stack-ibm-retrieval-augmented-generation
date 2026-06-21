@@ -937,7 +937,7 @@
         },
         {
           "name": "cos_instance_crn",
-          "value": "ref:./members/2b - Essential Security - Cloud Object Storage/outputs/cos_instance_crn"
+          "value": "ref:../2b - Essential Security - Cloud Object Storage/outputs/cos_instance_crn"
         },
         {
           "name": "prefix",
