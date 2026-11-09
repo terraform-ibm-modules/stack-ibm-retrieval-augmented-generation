@@ -722,7 +722,7 @@
         },
         {
           "name": "elasticsearch_version",
-          "value": "8.19"
+          "value": "[]"
         },
         {
           "name": "kms_encryption_enabled",
